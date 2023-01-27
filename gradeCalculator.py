@@ -3,23 +3,26 @@ def calculateGrade():
     print("Calculating Grade")
     # This first line is provided for you
     try:
-        hrs = float(input("Enter score:"))
-    except ValueError:
-        print("Bad score")
-        return
-    if hrs >= 1:
-        print("Bad score")
-        return
-    if hrs >= 0.9:
-        print0("A")
-    elif hrs >= 0.8:
-        print("B")
-    elif hrs >= 0.7:
-        print("C")
-    elif hrs >= 0.6:
-        print("D")
-    elif hrs < 0.6:
-        print("F")    
+        score = float(input("Enter Score:"))
+        if score > 1.0:
+            grade = "Bad score"
+        elif score >= 0.9 and score <= 1.0:
+            grade = "A"
+        elif score >= 0.8:
+            grade = "B"
+        elif score >= 0.7:
+            grade = "C"
+        elif score > 0.6:
+            grade = "D"
+        elif score <= 0.6 and score >= 0:
+            grade = "F" 
+        else:
+            grade = "Bad score"
+    except:
+        grade = "Bad score"
+
+    print(grade)
+    
     # end assignment
 
 #  Score   Grade

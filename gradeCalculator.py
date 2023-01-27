@@ -11,7 +11,7 @@ def calculateGrade():
         print("Bad score")
         return
     if hrs >= 0.9:
-        print("A")
+        print0("A")
     elif hrs >= 0.8:
         print("B")
     elif hrs >= 0.7:
